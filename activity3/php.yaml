@@ -15,6 +15,13 @@
       ansible.builtin.copy:
         content: '<?php phpinfo(); ?>'
         dest: /var/www/html/info.phpx
+    - name: enssure httpd service is runnimg
+      ansible.builtin.service:
+        name: httpd
+        enabled: yes  
+        state : started
+      
+            
 
                 
           
